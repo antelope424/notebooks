@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparative Analysis of Global Assisted Dying Frameworks: Governance, Jurisprudential Evolution, and Clinical Procedures - Gemini Notebook</title>
+  <meta name="description" content="Legal and Historical Foundations of Assisted Dying in Canada The legalization of Medical Assistance in Dying (MAID) in Canada represents a profound shift in the intersection of...">
+  <!-- KaTeX CSS & JS for LaTeX Math Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '\\[', right: '\\]', display: true},
+        {left: '\\(', right: '\\)', display: false}
+      ],
+      throwOnError: false
+    });">
+  </script>
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border-color: #e2e8f0;
+      --table-header-bg: #f1f5f9;
+      --table-stripe: #f8fafc;
+      --table-hover: #f1f5f9;
+      --code-bg: #0f172a;
+      --code-text: #f8fafc;
+      --quote-border: #3b82f6;
+      --quote-bg: #eff6ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #0b0f19;
+        --card-bg: #111827;
+        --text-main: #f3f4f6;
+        --text-muted: #9ca3af;
+        --accent: #60a5fa;
+        --accent-hover: #93c5fd;
+        --border-color: #1f2937;
+        --table-header-bg: #1e293b;
+        --table-stripe: #111827;
+        --table-hover: #1f293d;
+        --code-bg: #030712;
+        --code-text: #e2e8f0;
+        --quote-border: #60a5fa;
+        --quote-bg: #1e293b;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 0 1rem;
+    }
+    .navbar {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .navbar a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .navbar a:hover { text-decoration: underline; }
+    .site-brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .container {
+      max-width: 920px;
+      margin: 2.5rem auto 4rem auto;
+      background: var(--card-bg);
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      border: 1px solid var(--border-color);
+    }
+    @media (max-width: 768px) {
+      .container { padding: 1.5rem 1.25rem; margin-top: 1rem; }
+    }
+    h1.article-title {
+      font-size: 2.1rem;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+    .article-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    h2 {
+      font-size: 1.55rem;
+      margin: 2.2rem 0 1rem 0;
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.4rem;
+      color: var(--text-main);
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin: 1.8rem 0 0.8rem 0;
+      color: var(--text-main);
+    }
+    h4 {
+      font-size: 1.1rem;
+      margin: 1.4rem 0 0.6rem 0;
+      color: var(--text-main);
+    }
+    p {
+      margin-bottom: 1.25rem;
+      font-size: 1.025rem;
+    }
+    ul, ol {
+      margin: 0 0 1.25rem 1.5rem;
+      font-size: 1.025rem;
+    }
+    li { margin-bottom: 0.4rem; }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover { color: var(--accent-hover); }
+    
+    /* Table Styling */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1.75rem 0;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+    thead th {
+      background-color: var(--table-header-bg);
+      color: var(--text-main);
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      border-bottom: 2px solid var(--border-color);
+      white-space: nowrap;
+    }
+    tbody td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+    tbody tr:nth-child(even) {
+      background-color: var(--table-stripe);
+    }
+    tbody tr:hover {
+      background-color: var(--table-hover);
+    }
+    
+    /* Citations and Badges */
+    .citation-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      background-color: rgba(37, 99, 235, 0.1);
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 0.1rem;
+      vertical-align: baseline;
+      transition: background 0.15s ease;
+    }
+    .citation-badge:hover {
+      background-color: rgba(37, 99, 235, 0.2);
+      text-decoration: none;
+    }
+    
+    blockquote {
+      border-left: 4px solid var(--quote-border);
+      background: var(--quote-bg);
+      padding: 0.9rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+      font-style: normal;
+    }
+    blockquote p:last-child { margin-bottom: 0; }
+    
+    pre {
+      background: var(--code-bg);
+      color: var(--code-text);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88em;
+      background: rgba(100, 116, 139, 0.12);
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre code {
+      background: transparent;
+      padding: 0;
+      color: inherit;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: var(--border-color);
+      margin: 2.5rem 0;
+    }
+    .footer {
+      max-width: 920px;
+      margin: 0 auto 3rem auto;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html">← Back to Index</a>
+    <span class="site-brand">Gemini Notebook</span>
+  </header>
+
+  <main class="container">
+    <h1 class="article-title">Comparative Analysis of Global Assisted Dying Frameworks: Governance, Jurisprudential Evolution, and Clinical Procedures</h1>
+    <div class="article-meta">
+      <span>📅 Published: September 04, 2026</span>
+      <span>⏱️ Estimated Read: 30 min</span>
+    </div>
+    <article>
+<h4>Legal and Historical Foundations of Assisted Dying in Canada</h4>
+<p>The legalization of Medical Assistance in Dying (MAID) in Canada represents a profound shift in the intersection of criminal law, constitutional rights, and clinical practice. For more than a century, assisted dying was strictly prohibited under Section 241(b) of the Criminal Code, which criminalized aiding or abetting suicide, and Section 14, which declared that no person could consent to have death inflicted upon them <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">[2]</a><a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a>. This legal status quo was first challenged at the constitutional level in the landmark case of <em>Rodriguez v. British Columbia (Attorney General)</em> in 1993 <a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7020802/" target="_blank" rel="noopener">[4]</a>. In a narrow 5–4 majority decision, the Supreme Court of Canada upheld the constitutionality of the prohibition, concluding that the state&#x27;s interest in preserving vulnerable lives outweighed the applicant’s autonomy claims under the principles of fundamental justice <a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7020802/" target="_blank" rel="noopener">[4]</a>. However, the four dissenting justices articulated a critical counter-argument that would lay the groundwork for future challenges: they asserted that the law created an arbitrary and discriminatory distinction, as a physically able person could legally choose to end their life, while a physically disabled person was criminally barred from seeking the assistance necessary to perform the same act <a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a>.</p>
+<p>Two decades later, this constitutional landscape was overturned by the Supreme Court of Canada in <em>Carter v. Canada (Attorney General)</em> (2015) <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">[2]</a><a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a>. The case, brought on behalf of the families of Kay Carter, who suffered from degenerative spinal stenosis, and Gloria Taylor, who had amyotrophic lateral sclerosis (ALS), focused on whether the absolute prohibition violated Section 7 of the Canadian Charter of Rights and Freedoms <a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a>. The court unanimously ruled that the criminal ban unconstitutionally deprived competent adults of their right to life, liberty, and security of the person <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">[2]</a><a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a>. The court reasoned that the absolute prohibition forced some individuals to take their own lives prematurely out of fear that they would become physically incapable of doing so when their suffering became intolerable, thereby directly threatening their right to life <a class="citation-badge" href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">[2]</a>. Furthermore, denying individuals the right to make decisions regarding their bodily integrity and medical care trenched upon their liberty and security of the person <a class="citation-badge" href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">[2]</a>.</p>
+<p>The federal government responded to the <em>Carter</em> decision by enacting Bill C-14 in June 2016, which decriminalized and regulated MAID <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a><a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Canada" target="_blank" rel="noopener">[5]</a>. The legislation restricted eligibility to competent adults experiencing intolerable suffering from a &quot;grievous and irremediable medical condition,&quot; defining this as an incurable illness or disability accompanied by an advanced state of irreversible decline and a natural death that was &quot;reasonably foreseeable&quot; <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a><a class="citation-badge" href="https://www.justice.gc.ca/eng/rp-pr/other-autre/addend/index.html" target="_blank" rel="noopener">[6]</a>. While the <em>Carter</em> decision itself did not explicitly mandate a terminal prognosis, the federal government chose a cautious end-of-life model to balance patient autonomy with the protection of vulnerable citizens who might be coerced into ending their lives <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7020802/" target="_blank" rel="noopener">[4]</a><a class="citation-badge" href="https://www.justice.gc.ca/eng/rp-pr/other-autre/addend/index.html" target="_blank" rel="noopener">[6]</a><a class="citation-badge" href="https://nrlc.org/nrlnewstoday/2026/05/a-good-sign-alberta-makes-legal-euthanasia-harder-to-access/" target="_blank" rel="noopener">[7]</a>. This tension would trigger subsequent legal and regional battles across Canada <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7020802/" target="_blank" rel="noopener">[4]</a>.</p>
+<hr>
+<h4>The Evolution of Canada&#x27;s Dual-Track System and Regional Polarization</h4>
+<p>The statutory requirement of a &quot;reasonably foreseeable natural death&quot; (RFND) was quickly challenged as unconstitutional. In <em>Truchon and Gladu v. Canada (Attorney General)</em> (2019), the Superior Court of Quebec ruled that the RFND restriction violated the Charter rights of individuals suffering from severe, incurable, but non-terminal conditions, such as advanced degenerative or neurodegenerative disorders <a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a><a class="citation-badge" href="https://www.cno.org/standards-learning/medical-assistance-in-dying" target="_blank" rel="noopener">[9]</a>. The federal government declined to appeal the ruling and instead introduced Bill C-7, which became law in March 2021 <a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Canada" target="_blank" rel="noopener">[5]</a><a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a><a class="citation-badge" href="https://dignitas.ch/en/knowledge/end-of-life-regulations-countries/" target="_blank" rel="noopener">[10]</a>. Bill C-7 fundamentally restructured Canada&#x27;s MAID program by removing the RFND barrier and establishing a &quot;dual-track&quot; eligibility framework <a class="citation-badge" href="https://dignitas.ch/en/knowledge/end-of-life-regulations-countries/" target="_blank" rel="noopener">[10]</a><a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://ieb-eib.org/en/euthanasia-and-assisted-suicide/alberta-canada-a-setback-for-the-expansion-of-euthanasia" target="_blank" rel="noopener">[12]</a>.</p>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Milestone or Legislative Act</th>
+        <th>Date Effective</th>
+        <th>Core Legal and Procedural Significance</th>
+        <th>Impact on Eligibility and Safeguards</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Rodriguez v. British Columbia</strong></td>
+        <td>September 30, 1993</td>
+        <td>5–4 Supreme Court decision upholding the Criminal Code prohibition <a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7020802/" target="_blank" rel="noopener">[4]</a></td>
+        <td>Maintained absolute ban on assisted dying; prioritized protection of the vulnerable <a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a><a class="citation-badge" href="https://www.justice.gc.ca/eng/rp-pr/other-autre/addend/index.html" target="_blank" rel="noopener">[6]</a></td>
+      </tr>
+      <tr>
+        <td><strong>Carter v. Canada (AG)</strong></td>
+        <td>February 6, 2015</td>
+        <td>Unanimous Supreme Court decision striking down absolute criminal prohibition <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">[2]</a><a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a></td>
+        <td>Declared total ban unconstitutional under Section 7 of the Charter for competent, suffering adults <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">[2]</a></td>
+      </tr>
+      <tr>
+        <td><strong>Bill C-14</strong></td>
+        <td>June 17, 2016</td>
+        <td>First federal statutory framework regulating MAID <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a><a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Canada" target="_blank" rel="noopener">[5]</a></td>
+        <td>Established eligibility criteria restricted to adults whose natural death was &quot;reasonably foreseeable&quot; <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">[3]</a></td>
+      </tr>
+      <tr>
+        <td><strong>Bill C-7</strong></td>
+        <td>March 17, 2021</td>
+        <td>Expanded federal MAID framework in response to <em>Truchon</em> decision <a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a><a class="citation-badge" href="https://www.cno.org/standards-learning/medical-assistance-in-dying" target="_blank" rel="noopener">[9]</a><a class="citation-badge" href="https://dignitas.ch/en/knowledge/end-of-life-regulations-countries/" target="_blank" rel="noopener">[10]</a></td>
+        <td>Established the dual-track system; removed foreseeable death requirement; introduced psychiatric temporary exclusion <a class="citation-badge" href="https://dignitas.ch/en/knowledge/end-of-life-regulations-countries/" target="_blank" rel="noopener">[10]</a><a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://ieb-eib.org/en/euthanasia-and-assisted-suicide/alberta-canada-a-setback-for-the-expansion-of-euthanasia" target="_blank" rel="noopener">[12]</a></td>
+      </tr>
+      <tr>
+        <td><strong>Bill 18 (Alberta)</strong></td>
+        <td>March 18, 2026</td>
+        <td>Enacted provincial <em>Safeguards for Last Resort Termination of Life Act</em> <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a></td>
+        <td>Banned Track 2 MAID, minors, and psychiatric MAID; established facility exclusion zones and direct family witness requirements <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://www.cbc.ca/news/canada/edmonton/alberta-medical-assistance-in-dying-limits-legislation-9.7133788" target="_blank" rel="noopener">[13]</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>Under this dual-track system, Track 1 applies to individuals whose natural death is reasonably foreseeable, maintaining the standard safeguards established under Bill C-14 <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a>. Track 2 applies to individuals whose natural death is not reasonably foreseeable, allowing access for those experiencing intolerable suffering from chronic, incurable somatic illnesses or disabilities <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://ieb-eib.org/en/euthanasia-and-assisted-suicide/alberta-canada-a-setback-for-the-expansion-of-euthanasia" target="_blank" rel="noopener">[12]</a>. To mitigate risks associated with Track 2, the law introduced enhanced safeguards: a mandatory 90-day assessment period, a requirement that at least one of the assessing clinicians has expertise in the patient&#x27;s specific underlying condition, and an explicit obligation to discuss and offer all available medical and social support alternatives <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a>.</p>
+<p>This expansion has led to a dramatic increase in uptake; in 2024, Canada reported 16,499 MAID provisions, accounting for 5.1% of all deaths in the country, bringing the cumulative total since 2016 to approximately 76,000 deaths <a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Canada" target="_blank" rel="noopener">[5]</a><a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a>.</p>
+<p>The rapid expansion of the federal framework has caused significant polarization, prompting some provinces to assert their jurisdiction over the delivery of healthcare to restrict the program <a class="citation-badge" href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">[2]</a><a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a><a class="citation-badge" href="https://ieb-eib.org/en/euthanasia-and-assisted-suicide/alberta-canada-a-setback-for-the-expansion-of-euthanasia" target="_blank" rel="noopener">[12]</a>. Although criminal law falls under federal jurisdiction, the administrative implementation of healthcare is a provincial responsibility <a class="citation-badge" href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">[2]</a><a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a>. In June 2023, Quebec passed Bill 11, which explicitly declared that a mental disorder (excluding neurocognitive disorders like dementia) cannot qualify as an illness for which a person may request MAID <a class="citation-badge" href="https://www.jurist.org/news/2026/06/canada-parliament-urged-to-expand-assisted-dying-to-patients-with-mental-illness/" target="_blank" rel="noopener">[15]</a><a class="citation-badge" href="https://www.ourcommons.ca/Content/Committee/451/AMAD/Brief/BR14028378/br-external/Jointly04-e.pdf" target="_blank" rel="noopener">[16]</a>.</p>
+<p>Following this precedent, the provincial government of Alberta passed Bill 18, the <em>Safeguards for Last Resort Termination of Life Act</em>, which received Royal Assent on March 18, 2026 <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a>. Bill 18 marks a major legislative departure from federal expansion, restricting MAID within Alberta through several provincial regulations <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://ieb-eib.org/en/euthanasia-and-assisted-suicide/alberta-canada-a-setback-for-the-expansion-of-euthanasia" target="_blank" rel="noopener">[12]</a>:</p>
+<ul>
+  <li><strong>Abolition of Track 2:</strong> It limits MAID eligibility to individuals whose natural death has been determined by a physician or nurse practitioner as being reasonably foreseeable within 12 months, effectively banning Track 2 within the province <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a>.</li>
+  <li><strong>Strict Prohibitions:</strong> It prohibits MAID for minors, for individuals whose sole underlying condition is a mental illness, and for advance requests <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a>.</li>
+  <li><strong>Clinician and Facility Restrictions:</strong> It bars healthcare practitioners from making out-of-province referrals for MAID assessments <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://www.cbc.ca/news/canada/edmonton/alberta-medical-assistance-in-dying-limits-legislation-9.7133788" target="_blank" rel="noopener">[13]</a>. It prohibits health professionals from suggesting MAID unsolicited and restricts health-care facilities from publicly displaying MAID-related information <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://www.cbc.ca/news/canada/edmonton/alberta-medical-assistance-in-dying-limits-legislation-9.7133788" target="_blank" rel="noopener">[13]</a>.</li>
+  <li><strong>Exclusion Zones:</strong> It permits health facilities to refuse MAID assessments or provisions on their premises, including the authority to enforce a 150-meter &quot;exclusion zone&quot; around their premises where MAID services are prohibited <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://www.cbc.ca/news/canada/edmonton/alberta-medical-assistance-in-dying-limits-legislation-9.7133788" target="_blank" rel="noopener">[13]</a>.</li>
+  <li><strong>In-Depth Clinical Audits:</strong> It requires assessors to review the patient&#x27;s complete health and personal information and make a reasonable effort to contact every practitioner who has acted as a primary care provider for the individual in the previous year <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://www.cbc.ca/news/canada/edmonton/alberta-medical-assistance-in-dying-limits-legislation-9.7133788" target="_blank" rel="noopener">[13]</a>.</li>
+  <li><strong>Family Witness Requirements:</strong> It mandates the physical presence of a direct family member during the administration of MAID, unless the provider determines that a family member is not reasonably available <a class="citation-badge" href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">[11]</a><a class="citation-badge" href="https://www.cbc.ca/news/canada/edmonton/alberta-medical-assistance-in-dying-limits-legislation-9.7133788" target="_blank" rel="noopener">[13]</a>.</li>
+</ul>
+<hr>
+<h4>Global Comparative Analysis of Governance Models</h4>
+<p>The global governance of assisted dying reveals a spectrum of regulatory models, ranging from highly restricted, terminal-phase frameworks to expansive models focused on subjective suffering.</p>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Country or State</th>
+        <th>Year Enacted</th>
+        <th>Primary Operational Modality</th>
+        <th>Broad National Eligibility Criteria</th>
+        <th>Regulatory Oversight Mechanism</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Canada (Federal)</strong></td>
+        <td>2016 <a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Canada" target="_blank" rel="noopener">[5]</a></td>
+        <td>Intravenous Euthanasia default (~98% of cases) <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a><a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a></td>
+        <td>Adults with a grievous, incurable somatic illness causing intolerable suffering <a class="citation-badge" href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">[1]</a><a class="citation-badge" href="https://harvardlawreview.org/print/vol-139/barriers-and-safeguards-appendix/" target="_blank" rel="noopener">[18]</a></td>
+        <td>Federal monitoring via Health Canada; provincial coroner review <a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a><a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html" target="_blank" rel="noopener">[19]</a></td>
+      </tr>
+      <tr>
+        <td><strong>Spain</strong></td>
+        <td>2021 <a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Spain" target="_blank" rel="noopener">[20]</a></td>
+        <td>Euthanasia and self-administered Assisted Suicide <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12801766/" target="_blank" rel="noopener">[21]</a><a class="citation-badge" href="https://www.dignityindying.org.uk/assisted-dying/assisted-dying-around-the-world/europe/" target="_blank" rel="noopener">[22]</a></td>
+        <td>Spanish nationals or residents; serious, chronic, disabling or incurable disease <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12801766/" target="_blank" rel="noopener">[21]</a></td>
+        <td>Multi-layered prospective review by regional Guarantee and Evaluation Commissions <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12801766/" target="_blank" rel="noopener">[21]</a></td>
+      </tr>
+      <tr>
+        <td><strong>Netherlands</strong></td>
+        <td>2002 <a class="citation-badge" href="https://en.wikipedia.org/wiki/Legality_of_euthanasia" target="_blank" rel="noopener">[23]</a></td>
+        <td>Intravenous Euthanasia default (~99% of cases) <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a><a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a></td>
+        <td>Individuals of all ages (1+) experiencing hopeless, unbearable physical or mental suffering <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a><a class="citation-badge" href="https://www.psychiatrictimes.com/view/psychiatric-euthanasia-in-the-netherlands-young-people-procedural-medicine-and-the-limits-of-psychiatry" target="_blank" rel="noopener">[24]</a><a class="citation-badge" href="https://www.government.nl/themes/family-health-and-care/euthanasia/is-euthanasia-allowed" target="_blank" rel="noopener">[25]</a></td>
+        <td>Retrospective assessment by five Regional Euthanasia Review Committees (RTE) <a class="citation-badge" href="https://english.euthanasiecommissie.nl/the-committees" target="_blank" rel="noopener">[26]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5665211/" target="_blank" rel="noopener">[27]</a></td>
+      </tr>
+      <tr>
+        <td><strong>Australia (Victoria)</strong></td>
+        <td>2019 <a class="citation-badge" href="https://apm.amegroups.org/article/view/66126/html" target="_blank" rel="noopener">[28]</a></td>
+        <td>Assisted Suicide default; Euthanasia if physically unable <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a><a class="citation-badge" href="https://apm.amegroups.org/article/view/66126/html" target="_blank" rel="noopener">[28]</a></td>
+        <td>Citizens or permanent residents; terminal somatic illness with \(\le \) 6–12 months to live <a class="citation-badge" href="https://apm.amegroups.org/article/view/66126/html" target="_blank" rel="noopener">[28]</a><a class="citation-badge" href="https://end-of-life.qut.edu.au/assisteddying" target="_blank" rel="noopener">[29]</a><a class="citation-badge" href="https://www.eldac.com.au/Our-Toolkits/End-of-Life-Law/Voluntary-Assisted-Dying/Overview" target="_blank" rel="noopener">[30]</a></td>
+        <td>Pre-authorization permit system managed by state Voluntary Assisted Dying Review Board <a class="citation-badge" href="https://end-of-life.qut.edu.au/assisteddying" target="_blank" rel="noopener">[29]</a><a class="citation-badge" href="https://www.health.vic.gov.au/voluntary-assisted-dying/about" target="_blank" rel="noopener">[31]</a></td>
+      </tr>
+      <tr>
+        <td><strong>Austria</strong></td>
+        <td>2022 <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a></td>
+        <td>Self-administered Assisted Suicide only <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a></td>
+        <td>Citizens or permanent residents; incurable terminal or severe chronic disease <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13086061/" target="_blank" rel="noopener">[33]</a></td>
+        <td>Mandatory notarization of a &quot;Dying Decree&quot; following a 12-week waiting period <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13086061/" target="_blank" rel="noopener">[33]</a></td>
+      </tr>
+      <tr>
+        <td><strong>Colombia</strong></td>
+        <td>1997 <a class="citation-badge" href="https://www.scielo.br/j/bioet/a/frX5nGB8qVtC3mcL4PmQnCN/?format=pdf&lang=en" target="_blank" rel="noopener">[34]</a><a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a></td>
+        <td>Euthanasia and self-administered Assisted Suicide (2022) <a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a></td>
+        <td>Nationals or residents; advanced, incurable illness or injury causing unbearable suffering <a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a><a class="citation-badge" href="https://www.expatfocus.com/colombia/guide/colombia-end-of-life-issues" target="_blank" rel="noopener">[36]</a></td>
+        <td>Oversight by Ministry of Health and institutional Interdisciplinary Committees <a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h5>The United Kingdom: Criminalization and Prosecution Guidelines</h5>
+<p>Assisted dying remains illegal in the United Kingdom under Section 2(1) of the Suicide Act 1961, which criminalizes any action capable of encouraging or assisting the suicide of another person <a class="citation-badge" href="https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html" target="_blank" rel="noopener">[37]</a>. Landmark legal challenges—most notably the consolidated cases of <em>Tony Nicklinson, Paul Lamb, and AM</em> before the UK Supreme Court in 2014—failed to secure a declaration of incompatibility under Article 8 of the European Convention on Human Rights, with the judiciary ruling that the decision to amend the law rested with Parliament rather than the courts <a class="citation-badge" href="https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html" target="_blank" rel="noopener">[37]</a>. This legal restriction has forced some British citizens to travel to Switzerland to seek assisted death <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11994194/" target="_blank" rel="noopener">[38]</a><a class="citation-badge" href="https://www.ovid.com/journals/cqhe/fulltext/10.1017/s0963180113000054~nonphysician-assisted-suicide-in-switzerland" target="_blank" rel="noopener">[39]</a>.</p>
+<p>However, a de facto system of conditional tolerance exists via the Crown Prosecution Service (CPS) <a class="citation-badge" href="https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html" target="_blank" rel="noopener">[37]</a>. Following legal pressure, the Director of Public Prosecutions issued updated guidance outlining six public interest factors that tend <em>against</em> prosecution <a class="citation-badge" href="https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html" target="_blank" rel="noopener">[37]</a>. These factors include:</p>
+<ul>
+  <li>The victim made a voluntary, clear, settled, and informed decision to end their life, free from any pressure, control, or coercion <a class="citation-badge" href="https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html" target="_blank" rel="noopener">[37]</a>.</li>
+  <li>The suspect was motivated solely by compassion and acted reluctantly in the face of significant emotional pressure from the victim <a class="citation-badge" href="https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html" target="_blank" rel="noopener">[37]</a>.</li>
+  <li>The suspect fully cooperated with the police investigation and reported the death immediately <a class="citation-badge" href="https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html" target="_blank" rel="noopener">[37]</a>.</li>
+</ul>
+<p>This framework establishes a legal environment where assisting a loved one&#x27;s death remains a crime, but compassionate assistance is rarely prosecuted, provided strict post-hoc criteria are met <a class="citation-badge" href="https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html" target="_blank" rel="noopener">[37]</a>.</p>
+<h5>Spain: The Multi-Layered Pre-Verification Filter</h5>
+<p>Spain legalized euthanasia and assisted suicide on June 25, 2021, through the Organic Law for the Regulation of Euthanasia (LORE) <a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Spain" target="_blank" rel="noopener">[20]</a>. The Spanish statute is distinguished by its highly structured, prospective pre-authorization filter, which requires 40 days to complete across three distinct levels of review <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12801766/" target="_blank" rel="noopener">[21]</a>. First, the primary responsible physician verifies all basic administrative and medical requirements <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12801766/" target="_blank" rel="noopener">[21]</a>. Second, an independent consulting physician reviews the patient&#x27;s medical history and clinical eligibility <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12801766/" target="_blank" rel="noopener">[21]</a>. Third, the case is forwarded to a regional Guarantee and Evaluation Commission (CGE), where a medical professional and a legal expert conduct a final prospective audit and issue a formal authorization <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12801766/" target="_blank" rel="noopener">[21]</a>.</p>
+<p>Between its inception and the end of 2024, Spain reported 1,123 completed provisions under this framework <a class="citation-badge" href="https://courthousenews.com/spanish-woman-25-dies-by-legal-euthanasia-in-case-that-drew-national-spotlight/" target="_blank" rel="noopener">[40]</a>. The law’s emphasis on the absolute autonomy of the individual, even in the face of family opposition, was demonstrated in the high-profile Catalan case of 25-year-old Andrea Castillo <a class="citation-badge" href="https://courthousenews.com/spanish-woman-25-dies-by-legal-euthanasia-in-case-that-drew-national-spotlight/" target="_blank" rel="noopener">[40]</a>. In April 2024, Castillo’s request for euthanasia was approved based on chronic, debilitating psychological and physical suffering, but her father filed a series of administrative and judicial appeals to halt the procedure <a class="citation-badge" href="https://courthousenews.com/spanish-woman-25-dies-by-legal-euthanasia-in-case-that-drew-national-spotlight/" target="_blank" rel="noopener">[40]</a>. After a prolonged legal battle, the Spanish Supreme Court in January upheld Castillo’s autonomous right to die, affirming that family members cannot legally override the decision of a competent adult under the LORE framework <a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Spain" target="_blank" rel="noopener">[20]</a><a class="citation-badge" href="https://courthousenews.com/spanish-woman-25-dies-by-legal-euthanasia-in-case-that-drew-national-spotlight/" target="_blank" rel="noopener">[40]</a>.</p>
+<h5>Colombia: Decriminalization via Constitutional Jurisprudence</h5>
+<p>Colombia is unique in Latin America, having legalized euthanasia entirely through constitutional jurisprudence rather than legislative action <a class="citation-badge" href="https://www.scielo.br/j/bioet/a/frX5nGB8qVtC3mcL4PmQnCN/?format=pdf&lang=en" target="_blank" rel="noopener">[34]</a><a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a>. The Constitutional Court of Colombia first decriminalized &quot;mercy killing&quot; performed by a physician in Sentence C-239/97 <a class="citation-badge" href="https://www.scielo.br/j/bioet/a/frX5nGB8qVtC3mcL4PmQnCN/?format=pdf&lang=en" target="_blank" rel="noopener">[34]</a><a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a>. Because the Colombian Congress repeatedly failed to pass formal legislation, the practice was regulated through administrative resolutions issued by the Ministry of Health and Social Protection <a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a><a class="citation-badge" href="https://www.patientsrightscouncil.org/site/colombia/" target="_blank" rel="noopener">[41]</a>.</p>
+<p>In 2014, the court ordered healthcare institutions to establish Interdisciplinary Committees to oversee and guarantee the right to die with dignity, and in September 2014, Law 1733 was enacted to guarantee universal access to palliative care <a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a><a class="citation-badge" href="https://www.expatfocus.com/colombia/guide/colombia-end-of-life-issues" target="_blank" rel="noopener">[36]</a>. In 2018, the Ministry of Health issued Resolution 825, establishing a pediatric euthanasia framework <a class="citation-badge" href="https://www.patientsrightscouncil.org/site/colombia/" target="_blank" rel="noopener">[41]</a>:</p>
+<ul>
+  <li>Minors aged 7 to 12 require parental consent in addition to the child&#x27;s explicit request <a class="citation-badge" href="https://www.patientsrightscouncil.org/site/colombia/" target="_blank" rel="noopener">[41]</a>.</li>
+  <li>Adolescents aged 12 to 14 may access the procedure with parental consent <a class="citation-badge" href="https://www.patientsrightscouncil.org/site/colombia/" target="_blank" rel="noopener">[41]</a>.</li>
+  <li>Adolescents aged 14 or older possess the legal authority to consent for themselves without parental agreement <a class="citation-badge" href="https://www.patientsrightscouncil.org/site/colombia/" target="_blank" rel="noopener">[41]</a>.</li>
+</ul>
+<p>In 2021, the Constitutional Court expanded the right to die with dignity by removing the requirement of a terminal diagnosis, allowing access for individuals experiencing unbearable suffering from any advanced, incurable bodily injury or illness <a class="citation-badge" href="https://www.scielo.br/j/bioet/a/frX5nGB8qVtC3mcL4PmQnCN/?format=pdf&lang=en" target="_blank" rel="noopener">[34]</a><a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a><a class="citation-badge" href="https://www.expatfocus.com/colombia/guide/colombia-end-of-life-issues" target="_blank" rel="noopener">[36]</a>. In 2022, the court further decriminalized medically assisted suicide <a class="citation-badge" href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">[35]</a>. According to national data, the vast majority of completed procedures have involved older adults, with an average recipient age of 62.5 years, and only one completed adolescent provision recorded through 2023 <a class="citation-badge" href="https://www.desclab.com/post/dataeuthanasia" target="_blank" rel="noopener">[42]</a>.</p>
+<h5>Austria: Self-Administration and the Notarized Dying Decree</h5>
+<p>Following a December 2020 Constitutional Court ruling that struck down the absolute ban on assisted suicide as a violation of self-determination, Austria enacted the Dying Decree Law (<em>Sterbeverfügungsgesetz</em>, StVfG), effective January 1, 2022 <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13086061/" target="_blank" rel="noopener">[33]</a>. The Austrian framework is strictly limited to assisted suicide; active euthanasia remains a criminal offense, and the final lethal act must be performed entirely by the patient <a class="citation-badge" href="https://www.dignityindying.org.uk/assisted-dying/assisted-dying-around-the-world/europe/" target="_blank" rel="noopener">[22]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a>.</p>
+<p>To obtain access, patients must establish a legally binding &quot;Dying Decree&quot; (<em>Sterbeverfügung</em>) through a notarized process <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13086061/" target="_blank" rel="noopener">[33]</a><a class="citation-badge" href="https://www.mdpi.com/1660-4601/22/2/218" target="_blank" rel="noopener">[43]</a>. This process requires assessments by two independent physicians, one of whom must be certified in palliative medicine <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13086061/" target="_blank" rel="noopener">[33]</a><a class="citation-badge" href="https://www.mdpi.com/1660-4601/22/2/218" target="_blank" rel="noopener">[43]</a>. A mandatory 12-week waiting period is enforced between the first consultation and the issuance of the decree to ensure the stability of the patient&#x27;s request, though this is shortened to 2 weeks if the patient is in the active, terminal phase of dying <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13086061/" target="_blank" rel="noopener">[33]</a>.</p>
+<p>The Austrian law also specifies the role of nursing staff, who are classified as &quot;assisting persons&quot; and must be explicitly identified in the dying decree if they participate in supporting the patient <a class="citation-badge" href="https://www.mdpi.com/1660-4601/22/2/218" target="_blank" rel="noopener">[43]</a>. Since legalization, the number of assisted suicides in Austria has risen from 54 in 2022 to 112 in 2024, remaining a small fraction of the 1,219 unassisted suicides recorded in the country in 2024 <a class="citation-badge" href="https://www.springermedizin.at/assisted-suicide-in-austria-implications-for-media-reporting/51917960" target="_blank" rel="noopener">[44]</a>. Survey data indicate that healthcare directors and nursing staff report significant legal uncertainty and a lack of clear institutional guidelines regarding their involvement <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a><a class="citation-badge" href="https://www.mdpi.com/1660-4601/22/2/218" target="_blank" rel="noopener">[43]</a>.</p>
+<h5>Australia: Highly Prescriptive State-Level VAD Frameworks</h5>
+<p>Between 2017 and 2022, all six Australian states enacted Voluntary Assisted Dying (VAD) legislation, with Victoria’s framework commencing first in June 2019 and New South Wales commencing in November 2023, followed by the Australian Capital Territory (ACT) in 2024 <a class="citation-badge" href="https://en.wikipedia.org/wiki/Legality_of_euthanasia" target="_blank" rel="noopener">[23]</a><a class="citation-badge" href="https://www.gogentleaustralia.org.au/voluntary_assisted_dying_in_nsw_what_you_need_to_know" target="_blank" rel="noopener">[45]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12289548/" target="_blank" rel="noopener">[46]</a>. The Australian model is characterized by its strict safeguards <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12289548/" target="_blank" rel="noopener">[46]</a><a class="citation-badge" href="https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/resources/voluntary+assisted+dying+annual+report+2022-23" target="_blank" rel="noopener">[47]</a>. Registered health practitioners are prohibited from initiating VAD discussions with patients to prevent undue clinical influence <a class="citation-badge" href="https://end-of-life.qut.edu.au/assisteddying" target="_blank" rel="noopener">[29]</a><a class="citation-badge" href="https://www.health.vic.gov.au/voluntary-assisted-dying/about" target="_blank" rel="noopener">[31]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12289548/" target="_blank" rel="noopener">[46]</a>. Furthermore, the model establishes self-administration as the mandatory default; clinician-administered euthanasia is permitted only if a medical practitioner certifies that the patient is physically incapable of self-administering or swallowing the lethal substance <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a><a class="citation-badge" href="https://apm.amegroups.org/article/view/66126/html" target="_blank" rel="noopener">[28]</a>.</p>
+<p>This default setting has led to a much higher proportion of assisted suicides in Australia than in Canada or the Netherlands <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a>. In Victoria, approximately 82.5% of VAD cases between 2019 and 2024 were self-administered <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a><a class="citation-badge" href="https://apm.amegroups.org/article/view/66126/html" target="_blank" rel="noopener">[28]</a>. Nationally, the proportions were 33% assisted suicide to 67% euthanasia in 2023-24, and 43% to 57% in 2022-23 <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a>.</p>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Victoria VAD (Self-Administration Default)</th>
+        <th>National Canadian MAID (IV Clinician-Administration)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>2022–2023</strong></td>
+        <td>~82.5% Self-Administration <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a></td>
+        <td>~98.0% Clinician-Administration <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a></td>
+      </tr>
+      <tr>
+        <td><strong>2023–2024</strong></td>
+        <td>33% Self-Administration / 67% Euthanasia (National Avg.) <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a></td>
+        <td>~98.0% Clinician-Administration <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p>The Australian framework practically excludes individuals living with progressive dementia <a class="citation-badge" href="https://insightplus.mja.com.au/2026/24/voluntary-assisted-dying-and-dementia" target="_blank" rel="noopener">[48]</a>. VAD legislation across all states requires patients to possess decision-making capacity throughout the entire multi-stage process <a class="citation-badge" href="https://end-of-life.qut.edu.au/assisteddying" target="_blank" rel="noopener">[29]</a><a class="citation-badge" href="https://insightplus.mja.com.au/2026/24/voluntary-assisted-dying-and-dementia" target="_blank" rel="noopener">[48]</a>. Because patients cannot request VAD via an advance care directive, those with advanced dementia cannot access the program once their cognitive decline has progressed, even if they had previously expressed a clear wish to do so <a class="citation-badge" href="https://apm.amegroups.org/article/view/66126/html" target="_blank" rel="noopener">[28]</a><a class="citation-badge" href="https://insightplus.mja.com.au/2026/24/voluntary-assisted-dying-and-dementia" target="_blank" rel="noopener">[48]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7222560/" target="_blank" rel="noopener">[49]</a>.</p>
+<h5>United States: The Dismantling of Residency Restrictions</h5>
+<p>In the United States, medical aid in dying remains restricted to self-administered assisted suicide for mentally competent, terminally ill adults with a prognosis of 6 months or less to live <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11994194/" target="_blank" rel="noopener">[38]</a><a class="citation-badge" href="https://www.ncbi.nlm.nih.gov/books/NBK525943/" target="_blank" rel="noopener">[50]</a><a class="citation-badge" href="https://dallaselderlawyer.com/will-assisted-suicide-tourism-hub-be-vermont-or-oregon/" target="_blank" rel="noopener">[51]</a>. Historically, all authorizing states enforced strict legal residency requirements <a class="citation-badge" href="https://compassionandchoices.org/legal-advocacy/residency-restrictions/" target="_blank" rel="noopener">[52]</a><a class="citation-badge" href="https://www.ovid.com/journals/hcrep/fulltext/10.1002/hast.1570~residency-requirements-for-medical-aid-in-dying" target="_blank" rel="noopener">[53]</a><a class="citation-badge" href="https://pubmed.ncbi.nlm.nih.gov/38487957/" target="_blank" rel="noopener">[54]</a>. This barrier was dismantled through constitutional litigation sponsored by patient advocacy organizations <a class="citation-badge" href="https://compassionandchoices.org/legal-advocacy/residency-restrictions/" target="_blank" rel="noopener">[52]</a><a class="citation-badge" href="https://www.ovid.com/journals/hcrep/fulltext/10.1002/hast.1570~residency-requirements-for-medical-aid-in-dying" target="_blank" rel="noopener">[53]</a><a class="citation-badge" href="https://pubmed.ncbi.nlm.nih.gov/38487957/" target="_blank" rel="noopener">[54]</a>.</p>
+<p>In <em>Gideonse v. Brown</em> (2021), an Oregon-licensed physician challenged the state’s residency restriction, arguing that it violated the Privileges and Immunities Clause of Article IV of the U.S. Constitution by preventing him from providing aid-in-dying care to his long-term patients residing across the border in Washington State <a class="citation-badge" href="https://compassionandchoices.org/legal-advocacy/residency-restrictions/" target="_blank" rel="noopener">[52]</a><a class="citation-badge" href="https://www.ovid.com/journals/hcrep/fulltext/10.1002/hast.1570~residency-requirements-for-medical-aid-in-dying" target="_blank" rel="noopener">[53]</a>. Oregon settled the lawsuit in March 2022, agreeing to stop enforcing the residency restriction and subsequently amending its statute to permanently remove it in 2023 <a class="citation-badge" href="https://compassionandchoices.org/legal-advocacy/residency-restrictions/" target="_blank" rel="noopener">[52]</a><a class="citation-badge" href="https://www.ovid.com/journals/hcrep/fulltext/10.1002/hast.1570~residency-requirements-for-medical-aid-in-dying" target="_blank" rel="noopener">[53]</a><a class="citation-badge" href="https://www.powershealth.org/about-us/newsroom/health-library/2022/03/29/out-of-state-residents-can-now-seek-medical-aid-in-dying-in-oregon" target="_blank" rel="noopener">[55]</a>. A parallel lawsuit in Vermont, <em>Bluestein v. Scott</em> (2022), brought on behalf of a terminally ill Connecticut resident and a Vermont physician, led to a similar settlement and statutory removal of Vermont’s residency requirement in May 2023 <a class="citation-badge" href="https://compassionandchoices.org/legal-advocacy/residency-restrictions/" target="_blank" rel="noopener">[52]</a><a class="citation-badge" href="https://www.ovid.com/journals/hcrep/fulltext/10.1002/hast.1570~residency-requirements-for-medical-aid-in-dying" target="_blank" rel="noopener">[53]</a>.</p>
+<p>While these rulings allow non-residents to access medical aid in dying in Oregon and Vermont, patients must physically travel to and remain within the authorizing state&#x27;s borders for every stage of the process, including consultations, clinical evaluations, and the final self-administration of the lethal medication <a class="citation-badge" href="https://deathwithdignity.org/resources/traveling-to-oregon-and-vermont-to/" target="_blank" rel="noopener">[56]</a>.</p>
+<hr>
+<h4>Procedural Reporting, Monitoring, and Death Registration Mechanisms</h4>
+<p>Effective governance of assisted dying requires a clear distinction between statistical <em>monitoring</em> (the systematic collection of population-level data for public accountability) and case-specific <em>oversight</em> (the retrospective auditing of clinician compliance and the investigation of potential irregularities) <a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a><a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html" target="_blank" rel="noopener">[19]</a>.</p>
+<h5>The Canadian Monitoring and Oversight Framework</h5>
+<p>Following the enactment of Bill C-14, Canada established a centralized, mandatory federal monitoring system managed by Health Canada, which commenced on November 1, 2018, and was expanded on January 1, 2023, under Bill C-7 <a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a><a class="citation-badge" href="https://www.cno.org/standards-learning/medical-assistance-in-dying" target="_blank" rel="noopener">[9]</a><a class="citation-badge" href="https://www.canada.ca/en/health-canada/services/publications/health-system-services/monitoring-system-medical-assistance-dying.html" target="_blank" rel="noopener">[57]</a>. The federal Minister of Health is designated as the recipient of all monitoring reports, except in Quebec, which maintains its own provincial reporting system <a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html" target="_blank" rel="noopener">[19]</a><a class="citation-badge" href="https://www.canada.ca/en/health-canada/services/publications/health-system-services/monitoring-system-medical-assistance-dying.html" target="_blank" rel="noopener">[57]</a>. Under the federal regulations, physicians, nurse practitioners, preliminary assessors (such as care coordinators who triage MAID requests), and pharmacists are legally mandated to file reports within strict deadlines <a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a><a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html" target="_blank" rel="noopener">[19]</a><a class="citation-badge" href="https://www.canada.ca/en/health-canada/services/publications/health-system-services/monitoring-system-medical-assistance-dying.html" target="_blank" rel="noopener">[57]</a><a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p2/2018/2018-08-08/html/sor-dors166-eng.html" target="_blank" rel="noopener">[58]</a>.</p>
+<p>These requirements vary based on the clinical outcome of the MAID request:</p>
+<ul>
+  <li>If a practitioner receives a written request and refers the patient to another provider or care coordination service, they must report the referral details within 30 days <a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html" target="_blank" rel="noopener">[19]</a><a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p2/2018/2018-08-08/html/sor-dors166-eng.html" target="_blank" rel="noopener">[58]</a>.</li>
+  <li>If a patient is determined to be ineligible, or if they choose to withdraw their request, the practitioner must report this outcome and the specific eligibility criteria that were not met within 30 days <a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html" target="_blank" rel="noopener">[19]</a><a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p2/2018/2018-08-08/html/sor-dors166-eng.html" target="_blank" rel="noopener">[58]</a>.</li>
+  <li>If a practitioner provides MAID via intravenous administration or prescribes a substance for self-administration, they must submit a detailed report within 30 days of the procedure <a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p2/2018/2018-08-08/html/sor-dors166-eng.html" target="_blank" rel="noopener">[58]</a>.</li>
+  <li>Pharmacists who dispense a substance for MAID must report basic patient and practitioner details, as well as the date and setting of dispensing, within 30 days <a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html" target="_blank" rel="noopener">[19]</a><a class="citation-badge" href="https://www.canada.ca/en/health-canada/services/publications/health-system-services/monitoring-system-medical-assistance-dying.html" target="_blank" rel="noopener">[57]</a>.</li>
+</ul>
+<p>While statistical monitoring occurs at the federal level, case-by-case oversight and the investigation of potential clinical infractions are the responsibility of provincial coroners, medical examiners, and professional licensing bodies <a class="citation-badge" href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">[8]</a><a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html" target="_blank" rel="noopener">[19]</a><a class="citation-badge" href="https://gazette.gc.ca/rp-pr/p2/2018/2018-08-08/html/sor-dors166-eng.html" target="_blank" rel="noopener">[58]</a>. This division has led to significant variations in how deaths are recorded on Medical Certificates of Death (MCD) <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7008676/" target="_blank" rel="noopener">[59]</a>. Health Canada’s non-binding guidelines suggest listing the immediate cause of death as the toxicity of the administered drugs, and the underlying precipitating illness as the underlying cause of death, while recording the manner of death as &quot;natural&quot; to protect patient privacy and safeguard insurance payouts <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7008676/" target="_blank" rel="noopener">[59]</a>. However, because provinces have independent jurisdiction over death registration, there is a lack of national standardization; some provinces mandate listing MAID as the manner of death, while others exclude any mention of MAID on the public death registry to respect patient confidentiality <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7008676/" target="_blank" rel="noopener">[59]</a>.</p>
+<h5>Retrospective and Prospective Oversight in Europe and Australia</h5>
+<p>In the Netherlands, oversight is entirely retrospective, managed by five Regional Euthanasia Review Committees (RTE) <a class="citation-badge" href="https://www.government.nl/themes/family-health-and-care/euthanasia/is-euthanasia-allowed" target="_blank" rel="noopener">[25]</a><a class="citation-badge" href="https://english.euthanasiecommissie.nl/the-committees" target="_blank" rel="noopener">[26]</a>. Following a completed procedure, the attending physician notifies the municipal pathologist, who submits the case file and the physician&#x27;s report to the RTE <a class="citation-badge" href="https://www.government.nl/themes/family-health-and-care/euthanasia/is-euthanasia-allowed" target="_blank" rel="noopener">[25]</a>. The committee reviews the file to ensure compliance with the six statutory due care criteria <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5665211/" target="_blank" rel="noopener">[27]</a><a class="citation-badge" href="https://academic.oup.com/ageing/article/55/6/afag170/8713027" target="_blank" rel="noopener">[60]</a>. If a breach is identified—such as failing to consult an independent second physician or relying on an ambiguous advance directive—the RTE is legally required to refer the case to the Public Prosecution Service and the Health and Youth Care Inspectorate for criminal investigation <a class="citation-badge" href="https://www.government.nl/themes/family-health-and-care/euthanasia/is-euthanasia-allowed" target="_blank" rel="noopener">[25]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5665211/" target="_blank" rel="noopener">[27]</a>.</p>
+<p>In contrast, Australian states utilize a prospective pre-authorization permit system overseen by state-level Voluntary Assisted Dying Review Boards <a class="citation-badge" href="https://www.health.vic.gov.au/voluntary-assisted-dying/about" target="_blank" rel="noopener">[31]</a><a class="citation-badge" href="https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/resources/voluntary+assisted+dying+annual+report+2022-23" target="_blank" rel="noopener">[47]</a>. The coordinating medical practitioner must submit a final review form and apply for a permit from the state’s Department of Health <a class="citation-badge" href="https://end-of-life.qut.edu.au/assisteddying" target="_blank" rel="noopener">[29]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6900053/" target="_blank" rel="noopener">[61]</a>. The administrative review ensures that all procedural steps—including two independent assessments, a written declaration, and three separate patient requests—have been completed before any life-ending substance can be legally prescribed or dispensed <a class="citation-badge" href="https://end-of-life.qut.edu.au/assisteddying" target="_blank" rel="noopener">[29]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6900053/" target="_blank" rel="noopener">[61]</a>. While this prospective system provides clinicians with robust protection against subsequent prosecution, it has been criticized for introducing administrative delays that can prolong patient suffering <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7222560/" target="_blank" rel="noopener">[49]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6900053/" target="_blank" rel="noopener">[61]</a>.</p>
+<hr>
+<h4>Pharmacological Standardizations and Clinical Execution Protocols</h4>
+<p>The clinical execution of assisted dying relies on standardized pharmacological regimens designed to induce rapid, painless, and predictable death <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_solution" target="_blank" rel="noopener">[62]</a>. The choice of administration route—intravenous injection or oral ingestion—dictates the specific drugs, dosages, and physiological mechanisms of action <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a>.</p>
+<h5>Intravenous Euthanasia Protocols</h5>
+<p>Intravenous (IV) administration is the primary method in Canada, accounting for nearly 98% of all MAID provisions, and is the dominant method in the Netherlands and Belgium <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a>. It offers high clinical predictability, with a median time from the first injection to death of approximately 9 minutes <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a>.</p>
+<p>The Canadian Association of MAID Assessors and Providers (CAMAP) and European professional bodies have established a highly standardized sequential protocol <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://www.dyingwithdignity.ca/blog/clarification-about-the-medications-used-in-a-maid-provision/" target="_blank" rel="noopener">[64]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9270985/" target="_blank" rel="noopener">[65]</a>:</p>
+<ol>
+  <li><strong>Sedation and Anxiolysis:</strong> The procedure begins with the administration of <strong>Midazolam</strong> (10 mg to 20 mg), a short-acting benzodiazepine that induces rapid muscle relaxation, relieves anxiety, and places the patient into a light, natural sleep <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a><a class="citation-badge" href="https://www.dyingwithdignity.ca/blog/clarification-about-the-medications-used-in-a-maid-provision/" target="_blank" rel="noopener">[64]</a>.</li>
+  <li><strong>Venous Desensitization:</strong> Because the primary anesthetic agent can cause significant irritation and a burning sensation in the vein, clinicians often administer a local anesthetic, typically <strong>Lidocaine</strong> (40 mg to 60 mg), immediately prior to the anesthetic injection <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a><a class="citation-badge" href="https://www.dyingwithdignity.ca/blog/clarification-about-the-medications-used-in-a-maid-provision/" target="_blank" rel="noopener">[64]</a>.</li>
+  <li><strong>Induction of Deep Coma:</strong> A massive, lethal dose of a general anesthetic—typically <strong>Propofol</strong> (1,000 mg to 2,000 mg)—is administered intravenously <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a><a class="citation-badge" href="https://www.dyingwithdignity.ca/blog/clarification-about-the-medications-used-in-a-maid-provision/" target="_blank" rel="noopener">[64]</a>. This extreme dosage rapidly depresses central nervous system activity, placing the patient into an irreversible coma so profound that respiratory arrest often occurs at this stage <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://www.dyingwithdignity.ca/blog/clarification-about-the-medications-used-in-a-maid-provision/" target="_blank" rel="noopener">[64]</a>.</li>
+  <li><strong>Neuromuscular Blockade:</strong> Once a deep coma is clinically confirmed, the clinician administers a non-depolarizing neuromuscular blocking agent, typically <strong>Rocuronium Bromide</strong> (150 mg to 200 mg) or <strong>Cisatracurium</strong> (30 mg to 40 mg) <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a>. These substances block nicotinic acetylcholine receptors at the motor endplate, completely paralyzing all skeletal muscles, including the diaphragm and intercostal muscles <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_solution" target="_blank" rel="noopener">[62]</a>. This halts respiratory effort entirely, resulting in rapid hypoxia and secondary cardiac arrest <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_solution" target="_blank" rel="noopener">[62]</a>.</li>
+</ol>
+<p>A comprehensive retrospective analysis of 3,557 intravenous MAID cases in Canada provided critical empirical insights into these pharmacological protocols <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a>:</p>
+<ul>
+  <li>The median time from the first injection to death was 9 minutes, with an interquartile range of 6 minutes <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a>.</li>
+  <li>The use of standard-dose lidocaine (40–60 mg) or high-dose propofol (&gt;1000 mg) was paradoxically associated with a slight prolongation of the time until death, increasing the median duration by 1 minute and 3 minutes, respectively <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a>.</li>
+  <li>In a minority of cases, clinicians administered secondary cardiotoxic medications to guarantee cardiac arrest: <strong>Bupivacaine</strong> (400 mg) was utilized in 20.3% of provisions, and a saturated solution of <strong>Potassium Chloride</strong> (80 mEq) was used in 4.0% of cases <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a>. Because high-dose potassium ions cause severe vascular pain and muscle spasms, they are strictly administered only after a deep coma has been established <a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_solution" target="_blank" rel="noopener">[62]</a>.</li>
+  <li>The study disproved public assertions regarding drug choices, confirming that <strong>Phenobarbital</strong> is not utilized in standard Canadian IV regimens, and <strong>Midazolam</strong> is used only in low, sedative doses to induce relaxation rather than as a primary lethal agent <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">[63]</a><a class="citation-badge" href="https://www.dyingwithdignity.ca/blog/clarification-about-the-medications-used-in-a-maid-provision/" target="_blank" rel="noopener">[64]</a>.</li>
+</ul>
+<h5>Oral Assisted Suicide Protocols</h5>
+<p>Oral administration is the mandatory modality in the United States and Austria, and is the default method in Australia <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">[32]</a><a class="citation-badge" href="https://apm.amegroups.org/article/view/50986/html" target="_blank" rel="noopener">[66]</a>. Because oral ingestion relies on gastrointestinal absorption, the clinical onset is significantly slower and more variable, with death typically occurring within 30 minutes to several hours <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a>.</p>
+<p>The standard oral protocol involves several clinical steps to ensure efficacy and minimize complications <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9270985/" target="_blank" rel="noopener">[65]</a>:</p>
+<ul>
+  <li><strong>Antiemetic Pre-treatment:</strong> To prevent vomiting and the expulsion of the lethal dose, patients must ingest an antiemetic, such as <strong>Metoclopramide</strong> (10 mg to 20 mg) or <strong>Ondansetron</strong> (8 mg), approximately 30 minutes before the primary mixture <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9270985/" target="_blank" rel="noopener">[65]</a>.</li>
+  <li><strong>Lethal Barbiturate Mixture:</strong> The patient dissolves a massive dose of a short-acting barbiturate—typically <strong>Pentobarbital</strong> or <strong>Secobarbital</strong> (9,000 mg to 15,000 mg)—into a small volume of sweet liquid or juice to mask the extremely bitter chemical taste <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9270985/" target="_blank" rel="noopener">[65]</a>.</li>
+  <li><strong>Mechanism of Death:</strong> Upon ingestion, the high concentration of barbiturates targets GABA-A receptors in the central nervous system, lengthening the opening of chloride channels and depressing neuronal activity <a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_solution" target="_blank" rel="noopener">[62]</a>. This induces rapid unconsciousness within 2 to 5 minutes, followed by profound respiratory depression and ultimate cardiac arrest <a class="citation-badge" href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">[17]</a><a class="citation-badge" href="https://en.wikipedia.org/wiki/Euthanasia_solution" target="_blank" rel="noopener">[62]</a>.</li>
+</ul>
+<hr>
+<h4>The Intersection of Psychiatric Suffering, Pediatric Access, and Social Vulnerability</h4>
+<h5>Psychiatric Euthanasia and Demographics</h5>
+<p>The debate over expanding assisted dying to individuals whose sole underlying condition is a mental illness reveals a profound gender and socio-demographic disparity <a class="citation-badge" href="https://www.christianlegalfellowship.org/blog/amadreport2026" target="_blank" rel="noopener">[67]</a><a class="citation-badge" href="https://www.catholicregister.org/item/4074-canadian-physicians-for-life-response-to-the-parliament-s-special-joint-committee-on-maid" target="_blank" rel="noopener">[69]</a>. In jurisdictions where psychiatric euthanasia is permitted (such as the Netherlands and Belgium), research indicates that between 69% and 77% of all individuals receiving psychiatric euthanasia are women <a class="citation-badge" href="https://www.catholicregister.org/item/4074-canadian-physicians-for-life-response-to-the-parliament-s-special-joint-committee-on-maid" target="_blank" rel="noopener">[69]</a>. Furthermore, psychiatric literature demonstrates that a high proportion of those requesting psychiatric euthanasia have experienced severe trauma, are highly marginalized, and live in chronic poverty <a class="citation-badge" href="https://www.catholicregister.org/item/4074-canadian-physicians-for-life-response-to-the-parliament-s-special-joint-committee-on-maid" target="_blank" rel="noopener">[69]</a>. This demographic concentration has led human rights experts and disability advocacy groups to express concern that systemic social failures, chronic loneliness, and a lack of trauma-informed care are driving requests for assisted dying among vulnerable women <a class="citation-badge" href="https://www.jurist.org/news/2026/06/canada-parliament-urged-to-expand-assisted-dying-to-patients-with-mental-illness/" target="_blank" rel="noopener">[15]</a><a class="citation-badge" href="https://www.catholicregister.org/item/4074-canadian-physicians-for-life-response-to-the-parliament-s-special-joint-committee-on-maid" target="_blank" rel="noopener">[69]</a>.</p>
+<p>In its June 2026 report, Canada&#x27;s AMAD Committee cited several clinical and ethical reasons for recommending an indefinite halt to psychiatric MAID, emphasizing the challenge of differentiating an autonomous request from the &quot;voice of the disease itself&quot; <a class="citation-badge" href="https://www.catholicregister.org/item/4074-canadian-physicians-for-life-response-to-the-parliament-s-special-joint-committee-on-maid" target="_blank" rel="noopener">[69]</a><a class="citation-badge" href="https://www.alliancevita.org/en/2026/06/canada-euthanasia-mental-disorders/" target="_blank" rel="noopener">[70]</a>. Critics also warn of a potential &quot;suicide contagion&quot; or &quot;Werther effect&quot; <a class="citation-badge" href="https://www.catholicregister.org/item/4074-canadian-physicians-for-life-response-to-the-parliament-s-special-joint-committee-on-maid" target="_blank" rel="noopener">[69]</a><a class="citation-badge" href="https://www.alliancevita.org/en/2026/06/canada-euthanasia-mental-disorders/" target="_blank" rel="noopener">[70]</a>. While population-level statistics in Belgium show no clear empirical link between the enactment of the 2002 Euthanasia Law and general suicide rates <a class="citation-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10074264/" target="_blank" rel="noopener">[71]</a>, suicide prevention experts argue that offering medicalized death for mental illness undermines suicide prevention initiatives <a class="citation-badge" href="https://www.catholicregister.org/item/4074-canadian-physicians-for-life-response-to-the-parliament-s-special-joint-committee-on-maid" target="_blank" rel="noopener">[69]</a><a class="citation-badge" href="https://www.alliancevita.org/en/2026/06/canada-euthanasia-mental-disorders/" target="_blank" rel="noopener">[70]</a>.</p>
+<p>Approximately 80% of individuals who attempt or die by suicide exhibit warning signs—such as social withdrawal, chronic anxiety, and feelings of being a burden—that mirror the symptoms of those seeking psychiatric MAID <a class="citation-badge" href="https://www.christianlegalfellowship.org/blog/amadreport2026" target="_blank" rel="noopener">[67]</a>. Facilitating medicalized death in these cases risks establishing a two-tiered system where some individuals receive suicide prevention, while others are provided with suicide assistance based on their disability status <a class="citation-badge" href="https://www.christianlegalfellowship.org/blog/amadreport2026" target="_blank" rel="noopener">[67]</a>.</p>
+<h5>Pediatric Euthanasia and Moral Consistency</h5>
+<p>The moral boundary of age-based eligibility has also shifted <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a>. The Netherlands’ 2024 expansion to include terminally ill children aged 1 to 12, alongside Belgium’s open-ended &quot;capacity for discernment&quot; standard for minors, is framed by proponents as a matter of compassionate consistency, ensuring that pediatric patients are not denied end-of-life choices solely because of their age <a class="citation-badge" href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">[14]</a><a class="citation-badge" href="https://www.catholicworldreport.com/2026/06/25/netherlands-records-first-euthanasia-death-of-child-under-12-after-law-expansion/" target="_blank" rel="noopener">[72]</a>.</p>
+<p>However, Catholic and pro-life bioethicists argue that this represents a grave ethical violation, asserting that children cannot provide truly informed consent and that the role of pediatric medicine should be limited to aggressive pain management and compassionate palliative care <a class="citation-badge" href="https://www.catholicworldreport.com/2026/06/25/netherlands-records-first-euthanasia-death-of-child-under-12-after-law-expansion/" target="_blank" rel="noopener">[72]</a>. This debate illustrates how the legalization of assisted dying can expand over time, transitioning from a strictly regulated end-of-life exception for terminally ill adults to a normalized clinical option for non-terminal illness, psychiatric distress, and pediatric patients <a class="citation-badge" href="https://ieb-eib.org/en/euthanasia-and-assisted-suicide/alberta-canada-a-setback-for-the-expansion-of-euthanasia" target="_blank" rel="noopener">[12]</a><a class="citation-badge" href="https://www.alliancevita.org/en/2026/06/canada-euthanasia-mental-disorders/" target="_blank" rel="noopener">[70]</a>.</p>
+<hr>
+<h4>References</h4>
+<ol>
+  <li>MAiD in Canada: Legal History, Eligibility &amp; Current Laws, <a href="https://rmrf.com/navigating-maid-from-crime-to-care/" target="_blank" rel="noopener">https://rmrf.com/navigating-maid-from-crime-to-care/</a></li>
+  <li>Carter v. Canada (Attorney General) - SCC Cases, <a href="https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do" target="_blank" rel="noopener">https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/14637/index.do</a></li>
+  <li>Medical Assistance in Dying (MAID) | The Canadian Encyclopedia, <a href="https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada" target="_blank" rel="noopener">https://thecanadianencyclopedia.ca/en/article/assisted-suicide-in-canada</a></li>
+  <li>Medical Assistance in Dying (MAiD) in Canada: A Critical Analysis of the Exclusion of Vulnerable Populations - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7020802/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC7020802/</a></li>
+  <li>Euthanasia and assisted suicide in Canada - Wikipedia, <a href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Canada" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Canada</a></li>
+  <li>Legislative Background: Medical Assistance in Dying (Bill C-14) - Addendum, <a href="https://www.justice.gc.ca/eng/rp-pr/other-autre/addend/index.html" target="_blank" rel="noopener">https://www.justice.gc.ca/eng/rp-pr/other-autre/addend/index.html</a></li>
+  <li>A Good Sign: Alberta Makes Legal Euthanasia Harder to Access - National Right to Life, <a href="https://nrlc.org/nrlnewstoday/2026/05/a-good-sign-alberta-makes-legal-euthanasia-harder-to-access/" target="_blank" rel="noopener">https://nrlc.org/nrlnewstoday/2026/05/a-good-sign-alberta-makes-legal-euthanasia-harder-to-access/</a></li>
+  <li>Full article: Monitoring medical assistance in dying (MAiD) in Canada: Perspectives of physicians, nurse practitioners, and organizational regulatory actors - Taylor &amp; Francis, <a href="https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743" target="_blank" rel="noopener">https://www.tandfonline.com/doi/full/10.1080/07481187.2025.2572743</a></li>
+  <li>Medical Assistance in Dying: Legislation and Timeline - CNO, <a href="https://www.cno.org/standards-learning/medical-assistance-in-dying" target="_blank" rel="noopener">https://www.cno.org/standards-learning/medical-assistance-in-dying</a></li>
+  <li>Countries with end-of-life-choice regulation - DIGNITAS, <a href="https://dignitas.ch/en/knowledge/end-of-life-regulations-countries/" target="_blank" rel="noopener">https://dignitas.ch/en/knowledge/end-of-life-regulations-countries/</a></li>
+  <li>Protecting vulnerable Albertans seeking MAID | Alberta.ca, <a href="https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid" target="_blank" rel="noopener">https://www.alberta.ca/protecting-vulnerable-albertans-seeking-maid</a></li>
+  <li>Alberta (Canada): a setback for the expansion of euthanasia? | European Institute of Bioethics, <a href="https://ieb-eib.org/en/euthanasia-and-assisted-suicide/alberta-canada-a-setback-for-the-expansion-of-euthanasia" target="_blank" rel="noopener">https://ieb-eib.org/en/euthanasia-and-assisted-suicide/alberta-canada-a-setback-for-the-expansion-of-euthanasia</a></li>
+  <li>Alberta bill would limit medically assisted dying to patients facing &#x27;reasonably foreseeable&#x27; death | CBC News, <a href="https://www.cbc.ca/news/canada/edmonton/alberta-medical-assistance-in-dying-limits-legislation-9.7133788" target="_blank" rel="noopener">https://www.cbc.ca/news/canada/edmonton/alberta-medical-assistance-in-dying-limits-legislation-9.7133788</a></li>
+  <li>An International Comparison of Assisted Dying Regimes - Cardus, <a href="https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/" target="_blank" rel="noopener">https://www.cardus.ca/research/an-international-comparison-of-assisted-dying-regimes-part-1/</a></li>
+  <li>Canada Parliament urged to expand assisted dying to patients with mental illness - JURIST, <a href="https://www.jurist.org/news/2026/06/canada-parliament-urged-to-expand-assisted-dying-to-patients-with-mental-illness/" target="_blank" rel="noopener">https://www.jurist.org/news/2026/06/canada-parliament-urged-to-expand-assisted-dying-to-patients-with-mental-illness/</a></li>
+  <li>1 Written Brief Submitted to the Special Joint Committee on Medical Assistance in Dying and Ministers of Parliament Re - OurCommons.ca, <a href="https://www.ourcommons.ca/Content/Committee/451/AMAD/Brief/BR14028378/br-external/Jointly04-e.pdf" target="_blank" rel="noopener">https://www.ourcommons.ca/Content/Committee/451/AMAD/Brief/BR14028378/br-external/Jointly04-e.pdf</a></li>
+  <li>Review of Protocols and Substances for Euthanasia and Assisted Suicide, <a href="https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste" target="_blank" rel="noopener">https://eclj.org/euthanasia/un/revue-des-protocoles-et-substances-en-vue-de-leuthanasie-et-du-suicide-assiste</a></li>
+  <li>Appendix to Barriers and Safeguards: Access to Assisted Dying for the Socioeconomically Vulnerable - Harvard Law Review, <a href="https://harvardlawreview.org/print/vol-139/barriers-and-safeguards-appendix/" target="_blank" rel="noopener">https://harvardlawreview.org/print/vol-139/barriers-and-safeguards-appendix/</a></li>
+  <li>Canada Gazette – Monitoring of Medical Assistance in Dying Regulations, <a href="https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html" target="_blank" rel="noopener">https://gazette.gc.ca/rp-pr/p1/2017/2017-12-16/html/reg6-eng.html</a></li>
+  <li>Euthanasia and assisted suicide in Spain - Wikipedia, <a href="https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Spain" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Euthanasia_and_assisted_suicide_in_Spain</a></li>
+  <li>The euthanasia law from the perspective of healthcare professionals in Spain - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12801766/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC12801766/</a></li>
+  <li>Europe - Dignity in Dying, <a href="https://www.dignityindying.org.uk/assisted-dying/assisted-dying-around-the-world/europe/" target="_blank" rel="noopener">https://www.dignityindying.org.uk/assisted-dying/assisted-dying-around-the-world/europe/</a></li>
+  <li>Legality of euthanasia - Wikipedia, <a href="https://en.wikipedia.org/wiki/Legality_of_euthanasia" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Legality_of_euthanasia</a></li>
+  <li>Psychiatric Euthanasia in the Netherlands: Young People, Procedural Medicine, and the Limits of Psychiatry, <a href="https://www.psychiatrictimes.com/view/psychiatric-euthanasia-in-the-netherlands-young-people-procedural-medicine-and-the-limits-of-psychiatry" target="_blank" rel="noopener">https://www.psychiatrictimes.com/view/psychiatric-euthanasia-in-the-netherlands-young-people-procedural-medicine-and-the-limits-of-psychiatry</a></li>
+  <li>Is euthanasia legal in the Netherlands? - Government.nl, <a href="https://www.government.nl/themes/family-health-and-care/euthanasia/is-euthanasia-allowed" target="_blank" rel="noopener">https://www.government.nl/themes/family-health-and-care/euthanasia/is-euthanasia-allowed</a></li>
+  <li>About us - Regional Euthanasia Review Committees, <a href="https://english.euthanasiecommissie.nl/the-committees" target="_blank" rel="noopener">https://english.euthanasiecommissie.nl/the-committees</a></li>
+  <li>Euthanasia and physician-assisted suicide not meeting due care criteria in the Netherlands: a qualitative review of review committee judgements - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5665211/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC5665211/</a></li>
+  <li>Voluntary assisted dying in the Australian state of Victoria: an overview of challenges for clinical implementation - Annals of Palliative Medicine, <a href="https://apm.amegroups.org/article/view/66126/html" target="_blank" rel="noopener">https://apm.amegroups.org/article/view/66126/html</a></li>
+  <li>Voluntary Assisted Dying - End of Life Law in Australia - QUT, <a href="https://end-of-life.qut.edu.au/assisteddying" target="_blank" rel="noopener">https://end-of-life.qut.edu.au/assisteddying</a></li>
+  <li>End of Life Law - Voluntary Assisted Dying - Overview - ELDAC, <a href="https://www.eldac.com.au/Our-Toolkits/End-of-Life-Law/Voluntary-Assisted-Dying/Overview" target="_blank" rel="noopener">https://www.eldac.com.au/Our-Toolkits/End-of-Life-Law/Voluntary-Assisted-Dying/Overview</a></li>
+  <li>About voluntary assisted dying | health.vic.gov.au, <a href="https://www.health.vic.gov.au/voluntary-assisted-dying/about" target="_blank" rel="noopener">https://www.health.vic.gov.au/voluntary-assisted-dying/about</a></li>
+  <li>Institutional challenges in responding to Austria&#x27;s Dying Decree Law: An evaluation from the perspectives of nursing and medical directors - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC13129360/</a></li>
+  <li>Evaluating Experiences With the Newly Enacted Law on Assisted Suicide in Austria: Protocol for an Interdisciplinary Mixed Methods Study - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13086061/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC13086061/</a></li>
+  <li>Euthanasia: the Colombian legal framework - SciELO, <a href="https://www.scielo.br/j/bioet/a/frX5nGB8qVtC3mcL4PmQnCN/?format=pdf&amp;lang=en" target="_blank" rel="noopener">https://www.scielo.br/j/bioet/a/frX5nGB8qVtC3mcL4PmQnCN/?format=pdf&amp;lang=en</a></li>
+  <li>Medically assisted dying in Colombia - Pontificia Universidad Javeriana, <a href="https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/" target="_blank" rel="noopener">https://perfilesycapacidades.javeriana.edu.co/en/publications/medically-assisted-dying-in-colombia/</a></li>
+  <li>Colombia - End of Life Issues - Expat Focus, <a href="https://www.expatfocus.com/colombia/guide/colombia-end-of-life-issues" target="_blank" rel="noopener">https://www.expatfocus.com/colombia/guide/colombia-end-of-life-issues</a></li>
+  <li>Assisted Dying/Assisted Suicide - Health and Social Care Committee, <a href="https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html" target="_blank" rel="noopener">https://publications.parliament.uk/pa/cm5804/cmselect/cmhealth/321/report.html</a></li>
+  <li>Strengthening Safeguards in the Assisted Dying Bill: A Comparative Review of Ethical, Legal, and Medical Considerations in End-of-Life Legislation - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11994194/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC11994194/</a></li>
+  <li>Nonphysician-Assisted Suicide in Switzerland : Cambridge Quarterly of Healthcare Ethics, <a href="https://www.ovid.com/journals/cqhe/fulltext/10.1017/s0963180113000054~nonphysician-assisted-suicide-in-switzerland" target="_blank" rel="noopener">https://www.ovid.com/journals/cqhe/fulltext/10.1017/s0963180113000054~nonphysician-assisted-suicide-in-switzerland</a></li>
+  <li>Spanish woman, 25, dies by legal euthanasia in case that drew national spotlight, <a href="https://courthousenews.com/spanish-woman-25-dies-by-legal-euthanasia-in-case-that-drew-national-spotlight/" target="_blank" rel="noopener">https://courthousenews.com/spanish-woman-25-dies-by-legal-euthanasia-in-case-that-drew-national-spotlight/</a></li>
+  <li>Colombia | Patients Rights Council, <a href="https://www.patientsrightscouncil.org/site/colombia/" target="_blank" rel="noopener">https://www.patientsrightscouncil.org/site/colombia/</a></li>
+  <li>Euthanasia in Colombia: Data on the right to die with dignity in Colombia - DescLAB, <a href="https://www.desclab.com/post/dataeuthanasia" target="_blank" rel="noopener">https://www.desclab.com/post/dataeuthanasia</a></li>
+  <li>Assisted Suicide in Austria: Nurses&#x27; Understanding of Patients&#x27; Requests and the Role of Patient Symptoms - MDPI, <a href="https://www.mdpi.com/1660-4601/22/2/218" target="_blank" rel="noopener">https://www.mdpi.com/1660-4601/22/2/218</a></li>
+  <li>Assisted suicide in Austria: implications for media reporting - springermedizin.at, <a href="https://www.springermedizin.at/assisted-suicide-in-austria-implications-for-media-reporting/51917960" target="_blank" rel="noopener">https://www.springermedizin.at/assisted-suicide-in-austria-implications-for-media-reporting/51917960</a></li>
+  <li>Voluntary assisted dying in NSW: What you need to know - Go Gentle Australia, <a href="https://www.gogentleaustralia.org.au/voluntary_assisted_dying_in_nsw_what_you_need_to_know" target="_blank" rel="noopener">https://www.gogentleaustralia.org.au/voluntary_assisted_dying_in_nsw_what_you_need_to_know</a></li>
+  <li>Voluntary assisted dying—Australia in an international context - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12289548/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC12289548/</a></li>
+  <li>Voluntary Assisted Dying Review Board Annual Report 2022-2023 - SA Health, <a href="https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/resources/voluntary+assisted+dying+annual+report+2022-23" target="_blank" rel="noopener">https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/resources/voluntary+assisted+dying+annual+report+2022-23</a></li>
+  <li>Voluntary assisted dying and dementia - MJA InSight, <a href="https://insightplus.mja.com.au/2026/24/voluntary-assisted-dying-and-dementia" target="_blank" rel="noopener">https://insightplus.mja.com.au/2026/24/voluntary-assisted-dying-and-dementia</a></li>
+  <li>Too much safety? Safeguards and equal access in the context of voluntary assisted dying legislation - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7222560/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC7222560/</a></li>
+  <li>Conceptual, Legal, and Ethical Considerations in Physician-Assisted Death - NCBI - NIH, <a href="https://www.ncbi.nlm.nih.gov/books/NBK525943/" target="_blank" rel="noopener">https://www.ncbi.nlm.nih.gov/books/NBK525943/</a></li>
+  <li>Will Assisted Suicide Tourism Hub Be Vermont Or Oregon? - Michael Cohen Dallas Elder Lawyer, <a href="https://dallaselderlawyer.com/will-assisted-suicide-tourism-hub-be-vermont-or-oregon/" target="_blank" rel="noopener">https://dallaselderlawyer.com/will-assisted-suicide-tourism-hub-be-vermont-or-oregon/</a></li>
+  <li>Medical Aid in Dying: Residency Restrictions - Compassion &amp; Choices, <a href="https://compassionandchoices.org/legal-advocacy/residency-restrictions/" target="_blank" rel="noopener">https://compassionandchoices.org/legal-advocacy/residency-restrictions/</a></li>
+  <li>Residency Requirements for Medical Aid in Dying : Hastings Center Report - Ovid, <a href="https://www.ovid.com/journals/hcrep/fulltext/10.1002/hast.1570~residency-requirements-for-medical-aid-in-dying" target="_blank" rel="noopener">https://www.ovid.com/journals/hcrep/fulltext/10.1002/hast.1570~residency-requirements-for-medical-aid-in-dying</a></li>
+  <li>Residency Requirements for Medical Aid in Dying - PubMed, <a href="https://pubmed.ncbi.nlm.nih.gov/38487957/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/38487957/</a></li>
+  <li>Out-of-State Residents Can Now Seek Medical Aid in Dying in Oregon - Powers Health, <a href="https://www.powershealth.org/about-us/newsroom/health-library/2022/03/29/out-of-state-residents-can-now-seek-medical-aid-in-dying-in-oregon" target="_blank" rel="noopener">https://www.powershealth.org/about-us/newsroom/health-library/2022/03/29/out-of-state-residents-can-now-seek-medical-aid-in-dying-in-oregon</a></li>
+  <li>Traveling to Oregon and Vermont to Access Medical Aid in Dying - Death With Dignity, <a href="https://deathwithdignity.org/resources/traveling-to-oregon-and-vermont-to/" target="_blank" rel="noopener">https://deathwithdignity.org/resources/traveling-to-oregon-and-vermont-to/</a></li>
+  <li>Monitoring System for Medical Assistance in Dying in Canada, <a href="https://www.canada.ca/en/health-canada/services/publications/health-system-services/monitoring-system-medical-assistance-dying.html" target="_blank" rel="noopener">https://www.canada.ca/en/health-canada/services/publications/health-system-services/monitoring-system-medical-assistance-dying.html</a></li>
+  <li>Regulations for the Monitoring of Medical Assistance in Dying: SOR/2018-166, <a href="https://gazette.gc.ca/rp-pr/p2/2018/2018-08-08/html/sor-dors166-eng.html" target="_blank" rel="noopener">https://gazette.gc.ca/rp-pr/p2/2018/2018-08-08/html/sor-dors166-eng.html</a></li>
+  <li>Completion of Medical Certificates of Death after an Assisted Death: An Environmental Scan of Practices - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7008676/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC7008676/</a></li>
+  <li>Euthanasia in advanced dementia: an empirical study of the decision-making process based on advance directives | Age and Ageing | Oxford Academic, <a href="https://academic.oup.com/ageing/article/55/6/afag170/8713027" target="_blank" rel="noopener">https://academic.oup.com/ageing/article/55/6/afag170/8713027</a></li>
+  <li>Regulating voluntary assisted dying in Australia: some insights from the Netherlands - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6900053/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC6900053/</a></li>
+  <li>Euthanasia solution - Wikipedia, <a href="https://en.wikipedia.org/wiki/Euthanasia_solution" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Euthanasia_solution</a></li>
+  <li>Medications and dosages used in medical assistance in dying: a cross-sectional study - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC8920593/</a></li>
+  <li>Clarification about the medications used in a MAID provision | Dying With Dignity Canada, <a href="https://www.dyingwithdignity.ca/blog/clarification-about-the-medications-used-in-a-maid-provision/" target="_blank" rel="noopener">https://www.dyingwithdignity.ca/blog/clarification-about-the-medications-used-in-a-maid-provision/</a></li>
+  <li>Efficacy and safety of drugs used for &#x27;assisted dying&#x27; - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9270985/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC9270985/</a></li>
+  <li>Assisted dying around the world: a status quaestionis - Mroz - Annals of Palliative Medicine, <a href="https://apm.amegroups.org/article/view/50986/html" target="_blank" rel="noopener">https://apm.amegroups.org/article/view/50986/html</a></li>
+  <li>Parliamentary Committee Recommends Halt to MAID for Mental Illness in Canada, <a href="https://www.christianlegalfellowship.org/blog/amadreport2026" target="_blank" rel="noopener">https://www.christianlegalfellowship.org/blog/amadreport2026</a></li>
+  <li>Barriers and Safeguards: Access to Assisted Dying for the Socioeconomically Vulnerable, <a href="https://harvardlawreview.org/print/vol-139/barriers-and-safeguards-access-to-assisted-dying-for-the-socioeconomically-vulnerable/" target="_blank" rel="noopener">https://harvardlawreview.org/print/vol-139/barriers-and-safeguards-access-to-assisted-dying-for-the-socioeconomically-vulnerable/</a></li>
+  <li>Canadian Physicians for Life response to the Parliament&#x27;s Special Joint Committee on MAiD, <a href="https://www.catholicregister.org/item/4074-canadian-physicians-for-life-response-to-the-parliament-s-special-joint-committee-on-maid" target="_blank" rel="noopener">https://www.catholicregister.org/item/4074-canadian-physicians-for-life-response-to-the-parliament-s-special-joint-committee-on-maid</a></li>
+  <li>Canada : A report against euthanasia for mental disorders - Alliance VITA, <a href="https://www.alliancevita.org/en/2026/06/canada-euthanasia-mental-disorders/" target="_blank" rel="noopener">https://www.alliancevita.org/en/2026/06/canada-euthanasia-mental-disorders/</a></li>
+  <li>Developments Under Assisted Dying Legislation: The Experience in Belgium and Other Countries - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10074264/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC10074264/</a></li>
+  <li>Netherlands records first euthanasia death of child under 12 after law expansion, <a href="https://www.catholicworldreport.com/2026/06/25/netherlands-records-first-euthanasia-death-of-child-under-12-after-law-expansion/" target="_blank" rel="noopener">https://www.catholicworldreport.com/2026/06/25/netherlands-records-first-euthanasia-death-of-child-under-12-after-law-expansion/</a></li>
+</ol>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>Published with Gemini Notebook Static Site Generator</p>
+  </footer>
+</body>
+</html>
